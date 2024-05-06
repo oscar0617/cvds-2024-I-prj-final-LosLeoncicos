@@ -5,6 +5,7 @@ import java.util.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -15,7 +16,7 @@ public class Autos {
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "MARCA")
+    @JoinColumn(name = "MARCA_ID", referencedColumnName = "ID")
     @OneToMany
     private String marca;
 
