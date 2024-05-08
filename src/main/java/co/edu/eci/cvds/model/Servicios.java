@@ -14,9 +14,10 @@ public class Servicios {
     @Column(name = "SERVICIO")
     private String servicio;
 
+    
     @ManyToOne
-    @JoinColumn(name = "MARCA_ID", referencedColumnName = "ID")
-    private Marcas marca;
+    @JoinColumn(name = "MARCA", referencedColumnName = "MARCAS")
+    private String marca;
 
     @Column(name = "PRECIO")
     private int precio;
@@ -29,11 +30,11 @@ public class Servicios {
         this.servicio = servicio;
     }
 
-    public Marcas getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(Marcas marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
