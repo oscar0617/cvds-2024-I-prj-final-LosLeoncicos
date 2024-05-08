@@ -12,13 +12,14 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AUTOS")
 public class Autos {
+    
     @Id
     @Column(name = "ID")
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "MARCA", referencedColumnName = "MARCAS")
-    private String marca;
+    @JoinColumn(name = "MARCA", referencedColumnName = "MARCA")
+    private Marcas marca;
 
     @Column(name = "YEAR")
     private Date year;
@@ -37,13 +38,6 @@ public class Autos {
         this.id = id;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
 
     public Date getYear() {
         return year;
@@ -67,6 +61,14 @@ public class Autos {
 
     public void setCilindraje(int cilindraje) {
         this.cilindraje = cilindraje;
+    }
+
+    public Marcas getMarca() {
+        return marca;
+    }
+
+    public void setMarca(Marcas marca) {
+        this.marca = marca;
     }
 
 

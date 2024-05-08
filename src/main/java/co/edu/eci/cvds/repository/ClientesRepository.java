@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface ClientesRepository extends JpaRepository<Clientes, Integer> {
-    public List<Clientes> findByCedula(Integer cedula);
+    public List<Clientes> findBycedula(Integer cedula);
 
 }

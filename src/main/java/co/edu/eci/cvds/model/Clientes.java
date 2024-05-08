@@ -20,7 +20,7 @@ public class Clientes {
     private String nombre;
 
     @Column(name = "TELEFONO")
-    private int telefono;
+    private long telefono;
 
     @Column(name = "CORREOELECTRONICO")
     private String correoElectronico;
@@ -41,11 +41,11 @@ public class Clientes {
         this.nombre = nombre;
     }
 
-    public int getTelefono() {
+    public long getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(long telefono) {
         this.telefono = telefono;
     }
 

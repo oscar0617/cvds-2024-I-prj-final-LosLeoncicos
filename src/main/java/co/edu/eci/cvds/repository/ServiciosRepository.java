@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface ServiciosRepository extends JpaRepository<Servicios, String> {
-    public List<Servicios> findByServicio(String servicio);
+    public List<Servicios> findByservicio(String servicio);
 
 }

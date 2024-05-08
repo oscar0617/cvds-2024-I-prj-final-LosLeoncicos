@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MarcasRepository extends JpaRepository<Marcas, Integer> {
-    public List<Marcas> findByid(Integer id);
+public interface MarcasRepository extends JpaRepository<Marcas, String> {
+    public List<Marcas> findByMarca(String marca);
 
 }

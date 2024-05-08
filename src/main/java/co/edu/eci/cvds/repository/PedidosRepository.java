@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface PedidosRepository extends JpaRepository<Pedidos, Integer> {
-    public List<Pedidos> findByid(Integer id);
+    public List<Pedidos> findByNumPedido(Integer numPedido);
 
 }
