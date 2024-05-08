@@ -1,27 +1,58 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-<!-- //NOSONAR -->
-<th:block th:replace="fragments/general.html::headerfiles('Greeting Page')"></th:block>
-
-<body style="background-color: #283747;">
-
-    <main>
-
-        <div class="px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/static/hackers.jpg" alt="Logo de Top Gear">
-            <!-- Cambiar el color del título a amarillo -->
-            <h1 id="topquoter-title" class="display-5 fw-bold text-body-emphasis" style="color: yellow;">TOPQUOTER</h1>
-            <div class="col-lg-6 mx-auto">
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <!-- Botón de Cotizador TopQuoter -->
-                    <a type="button" class="btn btn-warning btn-lg px-4" href="/pantalla-principal">Cotizador TopQuoter</a>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOPQUOTER COTIZADOR</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+        <img src="/static/Images/logo.png" alt="logo">
+        <h1>TOP GEAR CENTRO AUTOMOTRIZ BOGOTÁ</h1>
+    </div>
+  </header>
+  <section class="principal">
+    <h2>Solicita una cotización</h2>
+    <section class="formulario">
+        <h3>Cotiza los servicios para tu vehículo</h3>
+        <form action="#">
+        <div class="campo">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" placeholder="Marca del vehículo">
         </div>
-    </main>
 
-    <footer th:replace="fragments/general::empty-footer"></footer>
+        <div class="campo">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" placeholder="Modelo del vehículo">
+        </div>
+        <div class="campo">
+            <label for="año">Año:</label>
+            <input type="text" id="año" name="año" placeholder="Año del vehículo">
+        </div>
+
+        <a type="button" class="Botoncito" href="aki-se-va-para-cotizaciones">¡Cotizar Ahora!</a>
+        </form>
+    </section>
+    <p>Somos tu centro automotriz de confianza.  Experiencia, calidad, buenos precios y por supuesto, descuentos. Revisa nuestras ofertas y ponte a TOP con nosotros.</p>
+  </section>
+
+  <section class="informacion">
+    <div class="dato">
+      <p>+2230</p>
+      <span>Vehículos trabajados</span>
+    </div>
+
+    <div class="dato">
+      <p>+250</p>
+      <span>Alistamientos exitosos</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 TopQuoter By Leoncicos</p>
+  </footer>
 </body>
-
 </html>
 
