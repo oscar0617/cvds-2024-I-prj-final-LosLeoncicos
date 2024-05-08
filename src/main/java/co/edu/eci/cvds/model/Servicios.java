@@ -8,7 +8,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -31,6 +30,9 @@ public class Servicios {
         inverseJoinColumns = @JoinColumn(name = "NUMPEDIDO")
     )
     private List<Pedidos> pedidos;
+
+    public Servicios() {
+    }
 
     public String getServicio() {
         return servicio;

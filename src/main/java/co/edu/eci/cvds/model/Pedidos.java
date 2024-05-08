@@ -27,6 +27,8 @@ public class Pedidos {
     @ManyToMany(mappedBy = "pedidos")
     private List<Servicios> servicios;
 
+    public Pedidos() {
+    }
 
     public int getNumPedido() {
         return numPedido;

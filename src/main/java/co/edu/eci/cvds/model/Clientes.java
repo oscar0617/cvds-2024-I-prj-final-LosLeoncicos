@@ -1,12 +1,9 @@
 package co.edu.eci.cvds.model;
 
-import org.hibernate.annotations.CollectionId;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,6 +21,9 @@ public class Clientes {
 
     @Column(name = "CORREOELECTRONICO")
     private String correoElectronico;
+
+    public Clientes() {
+    }
 
     public int getCedula() {
         return cedula;

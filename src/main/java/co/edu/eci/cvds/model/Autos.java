@@ -30,6 +30,9 @@ public class Autos {
     @Column(name = "CILINDRAJE")
     private int cilindraje;
 
+    public Autos(){
+    }
+
     public int getId() {
         return id;
     }
