@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "/configuration")
+@RequestMapping(value = "")
 public class ConfigurationController {
 
     private final ConfigurationService configurationService;
@@ -29,6 +29,11 @@ public class ConfigurationController {
     @GetMapping("/example/api")
     public String exampleApi() {
         return "example-api";
+    }
+
+    @GetMapping("/cotizaciones")
+    public String cotizaciones(Model model) {
+        return "cotizaciones";
     }
 
     @GetMapping("/example/api/configurations")
