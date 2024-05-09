@@ -5,21 +5,20 @@ import java.util.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "AUTOS")
-public class Autos {
+public class Auto {
     
     @Id
     @Column(name = "ID")
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "MARCA", referencedColumnName = "MARCA")
-    private Marcas marca;
+    /*@ManyToOne
+    @JoinColumn(name = "MARCA", referencedColumnName = "MARCA")*/
+    @Column(name = "MARCA")
+    private Marca marca;
 
     @Column(name = "YEAR")
     private Date year;
@@ -30,7 +29,7 @@ public class Autos {
     @Column(name = "CILINDRAJE")
     private int cilindraje;
 
-    public Autos(){
+    public Auto(){
     }
 
     public int getId() {
@@ -66,11 +65,11 @@ public class Autos {
         this.cilindraje = cilindraje;
     }
 
-    public Marcas getMarca() {
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setMarca(Marcas marca) {
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 

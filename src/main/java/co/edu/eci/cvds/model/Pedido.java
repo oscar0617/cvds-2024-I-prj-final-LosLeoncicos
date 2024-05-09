@@ -12,22 +12,25 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "PEDIDOS")
-public class Pedidos {
+public class Pedido {
     @Id
     @Column(name = "NUMPEDIDO")
     private int numPedido;
 
-    @ManyToOne
-    @JoinColumn(name = "CEDULA", referencedColumnName = "CEDULA")
-    private Clientes cliente;
+    /*@ManyToOne
+    @JoinColumn(name = "CEDULA", referencedColumnName = "CEDULA")*/
+    @Column(name = "CLIENTE")
+    private Cliente cliente;
 
     @Column(name = "DESCRIPCION")
     private String descripcion;
 
-    @ManyToMany(mappedBy = "pedidos")
-    private List<Servicios> servicios;
+    /*@ManyToMany(mappedBy = "pedidos")
+    private List<Servicio> servicios;*/
+    @Column(name = "SERVICIOS")
+    private String servicios;
 
-    public Pedidos() {
+    public Pedido() {
     }
 
     public int getNumPedido() {
@@ -48,20 +51,21 @@ public class Pedidos {
         this.descripcion = descripcion;
     }
 
-    public Clientes getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(Clientes cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
-    public List<Servicios> getServicios() {
+    public String getServicios() {
         return servicios;
     }
 
-    public void setServicios(List<Servicios> servicios) {
+    public void setServicios(String servicios) {
         this.servicios = servicios;
     }
+
 
 }

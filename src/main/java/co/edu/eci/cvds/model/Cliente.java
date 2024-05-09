@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "CLIENTES")
-public class Clientes {
+public class Cliente {
     @Id
     @Column(name = "CEDULA")
     private int cedula;
@@ -22,7 +22,7 @@ public class Clientes {
     @Column(name = "CORREOELECTRONICO")
     private String correoElectronico;
 
-    public Clientes() {
+    public Cliente() {
     }
 
     public int getCedula() {

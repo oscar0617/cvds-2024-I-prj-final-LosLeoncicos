@@ -12,26 +12,28 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "SERVICIOS")
-public class Servicios {
+public class Servicio {
     @Id
     @Column(name = "SERVICIO")
     private String servicio;
 
-    @JoinColumn(name = "MARCAS", referencedColumnName = "MARCA")
-    private Marcas marca;
+    /*@JoinColumn(name = "MARCAS", referencedColumnName = "MARCA")*/
+    @Column(name = "MARCA")
+    private Marca marca;
 
     @Column(name = "PRECIO")
     private int precio;
 
-    @ManyToMany
+    /*@ManyToMany
     @JoinTable(
         name = "SERVICIOS_PEDIDOS",
         joinColumns = @JoinColumn(name = "SERVICIO"),
         inverseJoinColumns = @JoinColumn(name = "NUMPEDIDO")
-    )
-    private List<Pedidos> pedidos;
+    )*/
+    @Column(name = "PEDIDO")
+    private List<Pedido> pedidos;
 
-    public Servicios() {
+    public Servicio() {
     }
 
     public String getServicio() {
@@ -51,11 +53,11 @@ public class Servicios {
         this.precio = precio;
     }
 
-    public Marcas getMarca() {
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setMarca(Marcas marca) {
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 }

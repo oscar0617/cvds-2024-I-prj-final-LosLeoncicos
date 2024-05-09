@@ -1,30 +1,36 @@
 package co.edu.eci.cvds.model;
 
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "MARCAS")
-public class Marcas {
+public class Marca {
     @Id
     @Column(name = "MARCA")
     private String marca;
 
-    @Column(name = "Pais")
+    @Column(name = "PAIS")
     private String pais;
 
-    @OneToMany(mappedBy = "marca")
-    private List<Autos> autos;
+    /*@OneToMany(mappedBy = "marca")
+    @Column(name = "AUTOS")
+    private List<Auto> autos;*/
 
-    @OneToMany(mappedBy = "marca")
-    private List<Servicios> servicios;
+    @Column(name = "AUTOS")
+    private String autos;
 
-    public Marcas(){
+    /*@OneToMany(mappedBy = "marca")
+    @Column(name = "SERVICIOS")
+    private List<Servicio> servicios;*/
+
+    @Column(name = "SERVICIOS")
+    private String servicios;
+
+    public Marca(){
     }
 
     public String getMarca() {
