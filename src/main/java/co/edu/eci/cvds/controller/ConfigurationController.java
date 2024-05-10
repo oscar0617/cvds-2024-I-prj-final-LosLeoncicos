@@ -36,6 +36,12 @@ public class ConfigurationController {
         return "cotizaciones";
     }
 
+    @GetMapping("/carrito")
+    public String carrito(Model model) {
+        return "carrito";
+    }
+
+    
     @GetMapping("/example/api/configurations")
     @ResponseBody
     public List<Configuration> exampleApiConfigurations() {
