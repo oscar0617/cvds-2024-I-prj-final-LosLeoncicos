@@ -1,7 +1,5 @@
 package co.edu.eci.cvds.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -15,16 +13,14 @@ public class Auto {
     @Column(name = "ID")
     private int id;
 
-    /*@ManyToOne
-    @JoinColumn(name = "MARCA", referencedColumnName = "MARCA")*/
     @Column(name = "MARCA")
-    private Marca marca;
-
-    @Column(name = "YEAR")
-    private Date year;
+    private String marca;
 
     @Column(name = "MODELO")
     private String modelo;
+
+    @Column(name = "LANZAMIENTO")
+    private int year;
 
     @Column(name = "CILINDRAJE")
     private int cilindraje;
@@ -38,15 +34,6 @@ public class Auto {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-
-    public Date getYear() {
-        return year;
-    }
-
-    public void setYear(Date year) {
-        this.year = year;
     }
 
     public String getModelo() {
@@ -65,13 +52,20 @@ public class Auto {
         this.cilindraje = cilindraje;
     }
 
-    public Marca getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(Marca marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
 }

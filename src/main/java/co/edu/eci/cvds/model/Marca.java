@@ -15,23 +15,20 @@ public class Marca {
 
     @Column(name = "PAIS")
     private String pais;
-
-    /*@OneToMany(mappedBy = "marca")
-    @Column(name = "AUTOS")
-    private List<Auto> autos;*/
-
-    @Column(name = "AUTOS")
-    private String autos;
-
-    /*@OneToMany(mappedBy = "marca")
-    @Column(name = "SERVICIOS")
-    private List<Servicio> servicios;*/
-
-    @Column(name = "SERVICIOS")
-    private String servicios;
+    
 
     public Marca(){
     }
+    
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    
 
     public String getMarca() {
         return marca;
