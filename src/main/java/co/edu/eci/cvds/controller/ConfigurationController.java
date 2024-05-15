@@ -31,11 +31,6 @@ public class ConfigurationController {
         return "example-api";
     }
 
-    @GetMapping("/cotizaciones")
-    public String cotizaciones(Model model) {
-        return "cotizaciones";
-    }
-
     @GetMapping("/carrito")
     public String carrito(Model model) {
         return "carrito";
