@@ -21,11 +21,11 @@
 
             <div class="service-grid">
               <div th:each="producto: ${productos}" class="service">
-                <div class="foto"><img src="https://s3.amazonaws.com/static.autolab.com.co/assets/images/autobooking/autobooking_icons/alineacion_y_balanceo-v3.svg"></div>
+                <div class="foto"><img src="${producto.icono}"></div>
                 <h3 th:text="${producto.producto}"></h3>
                 <a href="#">Agendar</a>
                 <h3>  </h3>
-                <h3 th:text="${producto.precio}"></h3>
+                <h3 th:text="'$ ' + ${producto.precio}"></h3>
               </div>
             </div>
     </main>
