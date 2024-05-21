@@ -1,9 +1,14 @@
 package co.edu.eci.cvds.model;
 
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,6 +23,12 @@ public class Cotizacion{
 
     @Column(name = "DESCRIPCION")
     private String descripcion;
+
+    @ManyToMany(targetEntity = Producto.class)
+    @JoinTable(name = "PRODUCTOS_COTIZACIONES",
+    joinColumns = @JoinColumn(name = "COTIZACION_ID"),
+    inverseJoinColumns = @JoinColumn(name = "PRODUCTO_ID"))
+    private List<Producto> productos;
 
 
     public Cotizacion(){
