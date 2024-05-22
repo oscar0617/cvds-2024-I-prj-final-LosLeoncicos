@@ -36,6 +36,11 @@ public class ConfigurationController {
         return "carrito";
     }
 
+    @GetMapping("/asesorwp")
+    public String asesor(Model model) {
+        return "asesorwp";
+    }
+
     
     @GetMapping("/example/api/configurations")
     @ResponseBody
