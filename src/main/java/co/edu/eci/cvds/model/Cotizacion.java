@@ -5,6 +5,8 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
@@ -15,14 +17,10 @@ import jakarta.persistence.Table;
 @Table(name = "COTIZACIONES")
 public class Cotizacion{
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "NUMCOTIZACION")
     private int numCotizacion;
 
-    @Column(name = "CEDULA")
-    private String cedula;
-
-    @Column(name = "DESCRIPCION")
-    private String descripcion;
 
     @ManyToMany(targetEntity = Producto.class)
     @JoinTable(name = "PRODUCTOS_COTIZACIONES",
@@ -32,6 +30,7 @@ public class Cotizacion{
 
 
     public Cotizacion(){
+        
     }
 
     public int getNumCotizacion() {
@@ -42,24 +41,12 @@ public class Cotizacion{
         this.numCotizacion= numCotizacion;
     }
 
-    
-
-    public String getDescripcion() {
-        return descripcion;
+    public void addProduct(Producto producto){
+        productos.add(producto);
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public List<Producto> getProductos(){
+        return productos;
     }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-    
-
 
 }

@@ -31,11 +31,6 @@ public class ConfigurationController {
         return "example-api";
     }
 
-    @GetMapping("/carrito")
-    public String carrito(Model model) {
-        return "carrito";
-    }
-
     
     @GetMapping("/example/api/configurations")
     @ResponseBody
@@ -49,4 +44,6 @@ public class ConfigurationController {
         configurationService.addConfiguration(configuration);
         return configurationService.getAllConfigurations();
     }
+
+    
 }

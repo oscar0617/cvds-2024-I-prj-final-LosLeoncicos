@@ -21,17 +21,12 @@
           <th>Cantidad</th>
           <th>Costo</th>
         </tr>
-        <tr>
+
+        <tr th:each="producto: ${productosCarrito}">
           <td><button class="eliminarProducto">x</button></td>
-          <td>Cambio de aceite</td>
+          <td th:text="${producto.producto}"></td>
           <td>1</td>
           <td>30.000</td>
-        </tr>
-        <tr>
-          <td><button class="eliminarProducto">x</button></td>
-          <td>Alineacion de Suspención</td>
-          <td>1</td>
-          <td>120.000</td>
         </tr>
       </table>
 
