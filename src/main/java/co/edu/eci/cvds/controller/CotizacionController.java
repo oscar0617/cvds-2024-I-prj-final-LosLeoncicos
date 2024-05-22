@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import co.edu.eci.cvds.model.Producto;
 import co.edu.eci.cvds.service.ProductoService;
@@ -33,4 +35,13 @@ public class CotizacionController {
         return "resumencotizaciones";
     }
 
+    @GetMapping("/crearCotizacion")
+    public String newCotizaciones(Model model){
+        return "crearCotizacion";
+    }
+    @PostMapping("/crearCotizacion/confirm")
+    public static String addCotizacion(@RequestParam int numCotizacion, int cedula,String description){
+        CotizacionController.addCotizacion(numCotizacion, cedula, description);
+        return "redirect:/resumencotizaciones";
+    }
 }

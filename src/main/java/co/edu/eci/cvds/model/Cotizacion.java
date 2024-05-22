@@ -34,6 +34,12 @@ public class Cotizacion{
     public Cotizacion(){
     }
 
+    public Cotizacion(int numPedido, String cedula, String description) {
+        this.numCotizacion = numPedido;
+        this.cedula = cedula;
+        this.descripcion = description;
+    }
+
     public int getNumCotizacion() {
         return numCotizacion;
     }

@@ -16,11 +16,13 @@ public class CotizacionService {
         this.cotizacionRepository = cotizacionRepository;
     }
 
-    public Cotizacion addConfiguration(Cotizacion cotizacion) {
-        return cotizacionRepository.save(cotizacion);
+    
+    public void addCotizacion(int numPedido, String cedula, String description) {
+        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, description);
+        cotizacionRepository.save(cotizacion);
     }
 
-    public Cotizacion getConfiguration(int numCotizacion) {
+    public Cotizacion getCotizacion(int numCotizacion) {
         return cotizacionRepository.findByNumCotizacion(numCotizacion).get(1);
     }
 
