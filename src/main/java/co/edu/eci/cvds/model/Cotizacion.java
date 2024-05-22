@@ -38,6 +38,7 @@ public class Cotizacion{
         this.numCotizacion = numPedido;
         this.cedula = cedula;
         this.descripcion = description;
+        this.productos = null;
     }
 
     public int getNumCotizacion() {
@@ -47,8 +48,6 @@ public class Cotizacion{
     public void setNumCotizacion(int numCotizacion) {
         this.numCotizacion= numCotizacion;
     }
-
-    
 
     public String getDescripcion() {
         return descripcion;
@@ -64,6 +63,14 @@ public class Cotizacion{
 
     public void setCedula(String cedula) {
         this.cedula = cedula;
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
     }
     
 

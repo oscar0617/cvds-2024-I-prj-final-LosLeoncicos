@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import co.edu.eci.cvds.model.Producto;
 import co.edu.eci.cvds.service.ProductoService;
+import co.edu.eci.cvds.service.CotizacionService;
 
 @Controller
 public class CotizacionController {
 
     @Autowired
     ProductoService productoService;
+    @Autowired
+    CotizacionService cotizacionService;
 
     @GetMapping("/cotizaciones")
     public String getProductos(Model model){
@@ -40,8 +43,8 @@ public class CotizacionController {
         return "crearCotizacion";
     }
     @PostMapping("/crearCotizacion/confirm")
-    public static String addCotizacion(@RequestParam int numCotizacion, int cedula,String description){
-        CotizacionController.addCotizacion(numCotizacion, cedula, description);
+    public String addCotizacion(@RequestParam int numCotizacion, String cedula,String description){
+        cotizacionService.addCotizacion(numCotizacion, cedula, description);
         return "redirect:/resumencotizaciones";
     }
 }
