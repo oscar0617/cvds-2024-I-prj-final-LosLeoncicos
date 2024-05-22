@@ -24,18 +24,18 @@
             </thead>
             <tbody>
                 <tr th:each="cotizacion: ${list}" class="filas">
-                    <td th:text="${cotizaciones.numcotizacion}"></td>
-                    <td th:text="${cotizaciones.cedula}"></td>
-                    <td th:text="${cotizaciones.descripcion}"></td>
+                    <td th:text="${cotizacion.numCotizacion}"></td>
+                    <td th:text="${cotizacion.cedula}"></td>
+                    <td th:text="${cotizacion.descripcion}"></td>
 
                     <td> 
                         <form th:action="@{/update}" method="post">
-                            <input type="hidden" th:name="numcotizacion" th:value="${cotizaciones.numcotizacion}"> <button type="submit">UPDATE</button> 
+                            <input type="hidden" th:name="numcotizacion" th:value="${cotizacion.numCotizacion}"> <button type="submit">UPDATE</button> 
                         </form>
                     </td>                    
 
                     <td> 
-                        <form th:action="@{/delete/confirm(numCotizacion=${cotizaciones.numcotizacion})}" method="post" onsubmit="return confirm('¿Está seguro de que desea eliminar la cotización?')">
+                        <form th:action="@{/delete/confirm(numCotizacion=${cotizacion.numCotizacion})}" method="post" onsubmit="return confirm('¿Está seguro de que desea eliminar la cotización?')">
                             <button type="submit">DELETE</button> 
                         </form>
                     </td>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import co.edu.eci.cvds.model.Cotizacion;
 import co.edu.eci.cvds.model.Producto;
 import co.edu.eci.cvds.service.ProductoService;
 import co.edu.eci.cvds.service.CotizacionService;
@@ -35,6 +36,8 @@ public class CotizacionController {
 
     @GetMapping("/resumencotizaciones")
     public String getCotizaciones(Model model){
+        List<Cotizacion> cotizaciones = cotizacionService.getAllCotizacion();
+        model.addAttribute("list", cotizaciones);
         return "resumencotizaciones";
     }
 
@@ -47,4 +50,6 @@ public class CotizacionController {
         cotizacionService.addCotizacion(numCotizacion, cedula, description);
         return "redirect:/resumencotizaciones";
     }
+
+
 }
