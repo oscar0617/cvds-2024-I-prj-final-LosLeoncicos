@@ -22,12 +22,17 @@
           <th>Costo</th>
         </tr>
 
-        <tr th:each="producto: ${productosCarrito}">
-          <td><button class="eliminarProducto">x</button></td>
-          <td th:text="${producto.producto}"></td>
-          <td>1</td>
-          <td>30.000</td>
-        </tr>
+        
+          <tr th:each="producto: ${productosCarrito}">
+            <form th:Action="@{/carrito/borrarProducto}" method="get">
+              <input type="hidden" name="nombreProducto" th:value="${producto.producto}">
+              <td><button type="submit" class="eliminarProducto">x</button></td>
+              <td th:text="${producto.producto}"></td>
+              <td>1</td>
+              <td>30.000</td>
+            </form>
+          </tr>
+        
       </table>
 
       <div class="costo">
@@ -40,7 +45,6 @@
         <a type="button" class="botonContinuar" href="#">Continuar</a>
       </div>
   </div>
-
 
   <footer>
     <p>&copy; 2024 TopQuoter By Leoncicos</p>

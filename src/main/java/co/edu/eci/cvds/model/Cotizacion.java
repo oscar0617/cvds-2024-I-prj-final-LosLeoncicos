@@ -45,6 +45,10 @@ public class Cotizacion{
         productos.add(producto);
     }
 
+    public void deleteProducto(Producto producto){
+        productos.remove(producto);
+    }
+
     public List<Producto> getProductos(){
         return productos;
     }
