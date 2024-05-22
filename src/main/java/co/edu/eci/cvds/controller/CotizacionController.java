@@ -28,4 +28,9 @@ public class CotizacionController {
         return "usuario";
     }
 
+    @GetMapping("/resumencotizaciones")
+    public String getCotizaciones(Model model){
+        return "resumencotizaciones";
+    }
+
 }
