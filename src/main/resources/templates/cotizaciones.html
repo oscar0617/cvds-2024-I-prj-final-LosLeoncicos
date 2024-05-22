@@ -27,12 +27,10 @@
               <div th:each="producto: ${productos}" class="service">
                 <div class="foto"><img src="../static/Images/mantenimiento.png"></div>
                 <h3 th:text="${producto.producto}"></h3>
-            
                 <form th:action="@{/cotizaciones/agregarProducto}" method="post">
                   <input type="hidden" name="nombreProducto" th:value="${producto.producto}">
                   <button type="submit">Añadir al Carrito</button>
                 </form>
-                <h3>  </h3>
                 <h3 th:text="'$ ' + ${producto.precio}"></h3>
               </div>
             </div>
