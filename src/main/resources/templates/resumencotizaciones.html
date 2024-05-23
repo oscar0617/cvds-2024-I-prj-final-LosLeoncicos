@@ -24,8 +24,8 @@
                     </tr>
             </thead>
             <tbody>
-                <tr th:each="cotizacion: ${list}" class="filas">
-                    <td th:text="${cotizacion.numCotizacion}"></td>
+                <tr th:each="producto: ${list}" class="filas">
+                    <td th:text="${producto.numCotizacion}"></td>
                     <td th:text="${cotizacion.cedula}"></td>
                     <td th:text="${cotizacion.estado}"></td>
 
