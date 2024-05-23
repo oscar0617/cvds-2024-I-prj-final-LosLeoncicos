@@ -22,16 +22,16 @@ _2024-I, CVDS-2024, David Leonardo Piñeros Cortés; Camilo Nicolas Murcia Espin
   ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/b5eac764-b216-4b23-bf9a-07c2bc58dba1)
 
 ## Arquitectura y Diseño detallado:
- - Modelo E-R.
+ - Modelo E-R. \n
    ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/0ccfba1d-7f17-448c-b70c-5b8be4c9ad25)
 
- - Diagrama de clases.
+ - Diagrama de clases. \n
    ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/789dc511-cb90-4ce7-a592-84896dfa5536)
 
  - La arquitectura usada para este proyecto fue JMBC, utilizamos el framework de Spring-Boot, el cual nos permitió ejecutar nuestra aplicacion por medio de nuestro localhost.
  - [Proyecto en Azure DevOps](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos).
- - [Backlog Sprint 2]([https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%202)).
- - [Backlog Sprint 3]([https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%203))
+ - [Backlog Sprint 2](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%202).
+ - [Backlog Sprint 3](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%203).
 
 ## Descripción del proceso:
  - Breve descripción de la Metodología.
