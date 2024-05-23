@@ -66,4 +66,9 @@ public class CotizacionService {
         }
         return cotizacion;
     }
+
+    public List<Producto> getProductos(){
+        Cotizacion cotizacion= this.getCotizacion();
+        return cotizacion.getProductos();
+    }
 }
