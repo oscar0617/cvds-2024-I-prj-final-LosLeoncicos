@@ -29,15 +29,16 @@
               <td><button type="submit" class="eliminarProducto">x</button></td>
               <td th:text="${producto.producto}"></td>
               <td>1</td>
-              <td>30.000</td>
+              <td th:text="${producto.precio}"></td>
             </form>
           </tr>
         
       </table>
 
       <div class="costo">
-        <h2>Subtotal: $99999</h2>
-        <h1>Total: $100000</h1>
+        <h2 th:text="Subtotal + ':' + ' $ ' + ${subtotal}"></h2>
+        <h1>+ Impuesto(19%)</h1>
+        <h1 th:text="Total + ':' + ' $ ' + ${total}"></h1>
       </div>
 
       <div class="botones">

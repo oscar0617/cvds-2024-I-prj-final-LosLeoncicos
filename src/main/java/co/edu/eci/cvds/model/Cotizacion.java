@@ -12,6 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import lombok.Getter;
 
 @Entity
 @Table(name = "COTIZACIONES")
@@ -33,6 +34,11 @@ public class Cotizacion{
     inverseJoinColumns = @JoinColumn(name = "PRODUCTO_ID"))
     private List<Producto> productos;
 
+    @Column(name = "SUBTOTAL")
+    private int subtotal;
+
+    @Column(name = "TOTAL")
+    private int total;
 
     public Cotizacion(){
     }
@@ -63,6 +69,23 @@ public class Cotizacion{
     public List<Producto> getProductos(){
         return productos;
     }
+
+    public int getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(int subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+    
 
     public String getCedula() {
         return cedula;
