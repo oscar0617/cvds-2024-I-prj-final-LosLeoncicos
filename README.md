@@ -32,7 +32,7 @@ _2024-I, CVDS-2024, David Leonardo Piñeros Cortés; Camilo Nicolas Murcia Espin
    ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/147172021/10c9b1d9-dc28-4260-8504-fcc214dd7a65)
 
 
- - La arquitectura usada para este proyecto fue JMBC, utilizamos el framework de Spring-Boot, el cual nos permitió ejecutar nuestra aplicacion por medio de nuestro localhost.
+ - La arquitectura usada para este proyecto fue MVC, utilizamos el framework de Spring-Boot, el cual nos permitió ejecutar nuestra aplicacion por medio de nuestro localhost.
  - [Proyecto en Azure DevOps](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos).
  - [Backlog Sprint 2](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%202).
  - [Backlog Sprint 3](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%203).
