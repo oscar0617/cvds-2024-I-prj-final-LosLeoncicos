@@ -19,6 +19,7 @@ public class CarritoContoller {
     @GetMapping("/carrito/borrarProducto")
     public String borrarProducto(@RequestParam String nombreProducto, Model model){
         carritoService.borrarProducto(nombreProducto);
+        System.out.println("Hola");
         return "redirect:/carritoCompras";
     }
 
