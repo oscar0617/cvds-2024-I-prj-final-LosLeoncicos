@@ -21,13 +21,15 @@
                         <th>Numero de la cotización</th>
                         <th>Cédula</th>
                         <th>Estado</th>
+                        <th>Total</th>
                     </tr>
             </thead>
             <tbody>
-                <tr th:each="producto: ${list}" class="filas">
-                    <td th:text="${producto.numCotizacion}"></td>
+                <tr th:each="cotizacion: ${list}" class="filas">
+                    <td th:text="${cotizacion.numCotizacion}"></td>
                     <td th:text="${cotizacion.cedula}"></td>
                     <td th:text="${cotizacion.estado}"></td>
+                    <td th:text="${cotizacion.total}"></td>
 
                     <td> 
                         <form th:action="@{/update}" method="post">
@@ -47,16 +49,17 @@
                 <thead>
                         <tr  id="productos">
                             <th>Id producto</th>
-                            <th>Cédula</th>
-                            <th>Descripción</th>
-                            <th>Estado</th>
+                            <th>Marca</th>
+                            <th>Tipo</th>
+                            <th>Precio</th>
                         </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="cotizacion: ${list}" class="filas">
-                        <td th:text="${cotizacion.numCotizacion}"></td>
-                        <td th:text="${cotizacion.cedula}"></td>
-                        <td th:text="${cotizacion.estado}"></td>
+                    <tr th:each="productos: ${list}" class="filas">
+                        <td th:text="${producto.producto}"></td>
+                        <td th:text="${producto.marca}"></td>
+                        <td th:text="${producto.tipo}"></td>
+                        <td th:text="${producto.precio}"></td>
     
                         <td> 
                             <form th:action="@{/update}" method="post">
