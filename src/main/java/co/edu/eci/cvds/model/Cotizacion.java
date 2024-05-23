@@ -24,9 +24,6 @@ public class Cotizacion{
     @Column(name = "CEDULA")
     private String cedula;
 
-    @Column(name = "DESCRIPCION")
-    private String descripcion;
-
     @Column(name = "ESTADO")
     private String estado;
 
@@ -40,10 +37,9 @@ public class Cotizacion{
     public Cotizacion(){
     }
 
-    public Cotizacion(int numPedido, String cedula, String description, String estado) {
+    public Cotizacion(int numPedido, String cedula,  String estado) {
         this.numCotizacion = numPedido;
         this.cedula = cedula;
-        this.descripcion = description;
         this.estado = estado;
         this.productos = null;
     }
@@ -67,7 +63,25 @@ public class Cotizacion{
     public List<Producto> getProductos(){
         return productos;
     }
-    
 
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
 
 }
