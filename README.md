@@ -29,6 +29,8 @@ _2024-I, CVDS-2024, David Leonardo Piñeros Cortés; Camilo Nicolas Murcia Espin
  - Diagrama de clases.
    
    ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/789dc511-cb90-4ce7-a592-84896dfa5536)
+   ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/147172021/10c9b1d9-dc28-4260-8504-fcc214dd7a65)
+
 
  - La arquitectura usada para este proyecto fue JMBC, utilizamos el framework de Spring-Boot, el cual nos permitió ejecutar nuestra aplicacion por medio de nuestro localhost.
  - [Proyecto en Azure DevOps](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos).
