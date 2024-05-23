@@ -134,4 +134,8 @@ public class CotizacionController {
         return "redirect:/resumencotizaciones";
     }
 
+    @GetMapping("/index")
+    public String getIndex(){
+        return "index";
+    }
 }

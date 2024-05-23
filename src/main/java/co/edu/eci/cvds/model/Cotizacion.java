@@ -45,7 +45,7 @@ public class Cotizacion{
     public Cotizacion(int numPedido, String cedula,  String estado, int precio) {
         this.numCotizacion = numPedido;
         this.cedula = cedula;
-        this.estado = estado;
+        this.estado = "Creado";
         this.total= precio;
         this.subtotal = precio;
         this.productos = null;
