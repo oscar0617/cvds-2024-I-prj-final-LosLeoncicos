@@ -36,14 +36,12 @@ _2024-I, CVDS-2024, David Leonardo Piñeros Cortés; Camilo Nicolas Murcia Espin
  - [Backlog Sprint 3](https://dev.azure.com/ivanlemus0422/cvds-2024-I-los-leoncicos/_sprints/backlog/cvds-2024-I-los-leoncicos%20Team/cvds-2024-I-los-leoncicos/Sprint%203).
 
 ## Descripción del proceso:
- - Breve descripción de la Metodología.
- - Enlace al backlog de AzureDevops (hacer público el Backlog).
+ - Nuestra metodologia consistió en la división del trabajo priorizando la importancia de cada requisito, asi mismo, buscamos que cada integrante hiciera la funcionalidad donde se sienta más seguro, para asegurar la calidad del producto.
  - Reporte de pruebas y de cubrimiento de las mismas (JUnit test).
  
 ### Sprint 2:
-    - ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/ebd5d99a-cf02-4108-9431-fcf867c0bb43)
-
+  ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/ebd5d99a-cf02-4108-9431-fcf867c0bb43)
 
 ### Sprint 3:
-    - ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/944aa6d1-8550-4012-9edb-1a31898d5eb0)
+  ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/944aa6d1-8550-4012-9edb-1a31898d5eb0)
 
