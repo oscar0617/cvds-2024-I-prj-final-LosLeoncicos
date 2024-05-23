@@ -38,6 +38,9 @@ _2024-I, CVDS-2024, David Leonardo Piñeros Cortés; Camilo Nicolas Murcia Espin
 ## Descripción del proceso:
  - Nuestra metodologia consistió en la división del trabajo priorizando la importancia de cada requisito, asi mismo, buscamos que cada integrante hiciera la funcionalidad donde se sienta más seguro, para asegurar la calidad del producto.
  - Reporte de pruebas y de cubrimiento de las mismas (JUnit test).
+
+![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/a33d4098-b06e-43c3-aeb6-a0c8ec3364c8)
+
  
 ### Sprint 2:
   ![image](https://github.com/oscar0617/cvds-2024-I-prj-final-LosLeoncicos/assets/111905740/ebd5d99a-cf02-4108-9431-fcf867c0bb43)
