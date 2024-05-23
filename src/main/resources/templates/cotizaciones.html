@@ -10,9 +10,13 @@
     <header>
         <img class="headerimg" src="static/Images/logo.png">
         <h1>¿Que servicios necesitas?</h1>
-        <div class="carrito">
-          <a type="button" class="carrito" href="carrito"></a>
 
+
+        <div class="carrito">
+          <form th:action="@{/carritoCompras}" method="get">
+            <button type="submit" class="carrito"></button>
+          </form>
+        
       </div>
     </header>
 
@@ -23,7 +27,11 @@
               <div th:each="producto: ${productos}" class="service">
                 <div class="foto"><img src="../static/Images/mantenimiento.png"></div>
                 <h3 th:text="${producto.producto}"></h3>
-                <a href="#">Agendar</a>
+            
+                <form th:action="@{/cotizaciones/agregarProducto}" method="post">
+                  <input type="hidden" name="nombreProducto" th:value="${producto.producto}">
+                  <button type="submit">Añadir al Carrito</button>
+                </form>
                 <h3>  </h3>
                 <h3 th:text="'$ ' + ${producto.precio}"></h3>
               </div>

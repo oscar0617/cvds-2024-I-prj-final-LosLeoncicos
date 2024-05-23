@@ -87,8 +87,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-.service a {
-    display: block;
+.service button {
+    display:block;
     background-color: #e01010;
     color: #ffffff;
     padding: 10px 20px;

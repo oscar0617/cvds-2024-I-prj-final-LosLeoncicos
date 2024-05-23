@@ -5,6 +5,8 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
@@ -15,6 +17,7 @@ import jakarta.persistence.Table;
 @Table(name = "COTIZACIONES")
 public class Cotizacion{
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "NUMCOTIZACION")
     private int numCotizacion;
 
@@ -53,35 +56,18 @@ public class Cotizacion{
         this.numCotizacion= numCotizacion;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public void addProduct(Producto producto){
+        productos.add(producto);
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void deleteProducto(Producto producto){
+        productos.remove(producto);
     }
 
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public List<Producto> getProductos() {
+    public List<Producto> getProductos(){
         return productos;
     }
+    
 
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
-    }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
 }

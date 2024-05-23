@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface CotizacionRepository extends JpaRepository<Cotizacion, Integer> {
-    public List<Cotizacion> findByNumCotizacion(int i);
-
+    List<Cotizacion> findByNumCotizacion(int numCotizacion);
 }
