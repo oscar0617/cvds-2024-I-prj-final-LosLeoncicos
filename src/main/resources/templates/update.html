@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar la cotización</title>
+    <link rel="stylesheet" href="../static/styleNuevaCotizacion.css">
+</head>
+<body>
+    <div id="div1">
+        <h1 class="tittle" th:text="'Actualizar estado de la cotización número: ' + ${numCotizacion} + ''"></h1>
+        <form th:action="@{/update/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea actualizar el estado de la cotización?')">
+            <input type="hidden" id="numCotizacion" name="numCotizacion" th:value="${numCotizacion}">
+            <div class="inputs">
+                <div class="update">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="En proceso">En proceso</option>
+                        <option value="Eliminado">Eliminado</option>
+                        <option value="Creado">Creado</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Actualizar estado</button>
+        </form>
+    </div>
+</body>
+</html>

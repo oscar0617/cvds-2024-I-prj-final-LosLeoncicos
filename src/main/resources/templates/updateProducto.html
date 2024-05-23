@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar la cotización</title>
+    <link rel="stylesheet" href="../static/styleActualizarProducto.css">
+</head>
+<body>
+    <div id="div1">
+        <h1 class="tittle" th:text="'Actualizar precio del producto: ' + ${producto} + ''"></h1>
+        <form th:action="@{/updateProducto/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea actualizar el precio de la cotización?')">
+            <input type="hidden" id="producto" name="producto" th:value="${producto}">
+            <div class="inputs">
+                <div class="update">
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio" name="precio" required>
+                </div>
+            </div>
+            <button type="submit">Actualizar precio</button>
+        </form>
+    </div>
+</body>
+</html>
