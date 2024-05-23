@@ -23,4 +23,8 @@ public class CarritoContoller {
         return "redirect:/carritoCompras";
     }
 
+    @GetMapping("/asesorwp")
+    public String getXd(){
+        return "asesorwp";
+    }
 }
