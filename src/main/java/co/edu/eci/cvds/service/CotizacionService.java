@@ -21,8 +21,8 @@ public class CotizacionService {
     }
 
     
-    public void addCotizacion(int numPedido, String cedula, String estado) {
-        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, estado);
+    public void addCotizacion(int numPedido, String cedula, String estado, int precio) {
+        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, estado, precio);
         cotizacionRepository.save(cotizacion);
     }
 

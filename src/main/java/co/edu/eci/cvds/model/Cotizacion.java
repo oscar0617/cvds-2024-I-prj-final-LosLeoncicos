@@ -42,10 +42,12 @@ public class Cotizacion{
     public Cotizacion(){
     }
 
-    public Cotizacion(int numPedido, String cedula,  String estado) {
+    public Cotizacion(int numPedido, String cedula,  String estado, int precio) {
         this.numCotizacion = numPedido;
         this.cedula = cedula;
         this.estado = estado;
+        this.total= precio;
+        this.subtotal = precio;
         this.productos = null;
     }
 

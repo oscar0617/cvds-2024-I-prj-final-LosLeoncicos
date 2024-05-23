@@ -104,6 +104,7 @@ h1 {
     border-radius: 5px;
     margin-bottom: 5px;
     align-items: flex-start;
+    color:#e0e0e0;
   }
   
   button { /*Actualizar estado boton*/
@@ -161,6 +162,7 @@ h1 {
 /* Estilo para los contenedores de inputs */
 .inputs {
     margin-bottom: 20px;
+    color:#e0e0e0;
 }
 
 .update {
