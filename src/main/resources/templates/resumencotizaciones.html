@@ -55,7 +55,7 @@
                         </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="producto: ${productos}" class="filas">
+                    <tr th:each="producto: ${listProductos}" class="filas">
                         <td th:text="${producto.producto}"></td>
                         <td th:text="${producto.marca}"></td>
                         <td th:text="${producto.tipo}"></td>

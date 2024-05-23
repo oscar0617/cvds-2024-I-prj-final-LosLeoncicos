@@ -78,7 +78,9 @@ public class CotizacionController {
     @GetMapping("/resumencotizaciones")
     public String getCotizaciones(Model model){
         List<Cotizacion> cotizaciones = cotizacionService.getAllCotizacion();
+        List<Producto> productos = productoService.getAllProducto();
         model.addAttribute("list", cotizaciones);
+        model.addAttribute("listProductos", productos);
         return "resumencotizaciones";
     }
 
