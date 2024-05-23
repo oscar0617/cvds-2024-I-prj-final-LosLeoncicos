@@ -27,6 +27,15 @@ public class Producto {
     public Producto() {
     }
 
+    public Producto(String producto, String marca, String tipo, int precio) {
+        this.producto = producto;
+        this.marca = marca;
+        this.tipo = tipo;
+        this.precio = precio;
+    }
+
+
+
     public String getProducto() {
         return producto;
     }

@@ -28,143 +28,30 @@ h1 {
     color:#fff
 }
 
-/* Estilos para la tabla */
+/* Estilo para las tablas */
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: #f2f2f2; /* Color de fondo gris clarito */
 }
 
-th,
-td {
-  padding: 10px;
-  border: 1px solid #ddd;
+th, td {
+  border: 1px solid yellow; /* Bordes de las celdas en amarillo */
+  padding: 8px;
   text-align: left;
 }
 
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Estilos para el formulario dentro de la tabla */
-.filas form {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.filas form button {
-  background-color: #f20707;
-  color: #fff;
-  padding: 5px 10px;
+/* Estilo para los botones */
+button {
+  background-color: red; /* Color de fondo rojo */
+  color: white;
+  padding: 8px 12px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.filas form button:hover {
-  opacity: 0.8;
+button:hover {
+  background-color: darkred; /* Cambia el color de fondo al pasar el cursor */
 }
-
-/* Estilos adicionales */
-#div1 {
-  padding: 20px;
-}
-
-.tittle {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.new-button {
-  text-align: right;
-  margin-top: 10px;
-}
-
-button {
-    width: 15%;
-    padding: 10px;
-    background-color: #ff0000;
-    color: #000000;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #ffffff;
-}
-
-.header-container {
-    display: flex;
-  }
-
-.header-container img {
-    align-items:start;
-    width: 100px;
-    height: 70px;
-  }
-
-.header-container h1 {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-  
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #1b1b20;
-    color: #ffda05;
-    text-align: center;
-  }
-
-  .header-container {
-    display: flex;
-  }
-
-  .header-container img {
-    align-items:start;
-    width: 100px;
-    height: 70px;
-  }
-
-  .header-container h1 {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-  .productos {
-    color:#f8f9fa;
-    margin-top: 0px;
-    text-align: center;
-    background-color: hsl(212, 33%, 8%);
-  }
-
-
-  .productos table {
-    margin: auto;
-    border-collapse: collapse;
-    width: 80%;
-    background-color: #090e13;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-
-  .productos table th,
-  .productos table td {
-    padding: 10px;
-    border-bottom: 1px solid #ffda06;
-  }
-
-  .productos table tr:not(:last-child) {
-    border-bottom: none;
-  }
 
   

@@ -101,10 +101,37 @@ public class CotizacionController {
     }
 
     @PostMapping("/update/confirm")
-    public String updateEmployee(@RequestParam int numCotizacion, String estado) {
+    public String updateCotizacion(@RequestParam int numCotizacion, String estado) {
         cotizacionService.updateCotizacion(numCotizacion, estado);
         return "redirect:/resumencotizaciones";
     }
 
+    @GetMapping("/crearProducto")
+    public String newProducto(Model model){
+        return "crearProducto";
+    }
+    @PostMapping("/crearProducto/confirm")
+    public String addProducto(@RequestParam String producto, String marca, String tipo, int precio){
+        productoService.addProducto(producto, marca, tipo, precio);
+        return "redirect:/resumencotizaciones";
+    }
+
+    @PostMapping("/updateProducto")
+    public String updateProducto(Model model, String producto){
+        model.addAttribute("producto", producto);
+        return "updateProducto";
+    }
+
+    @PostMapping("/updateProducto/confirm")
+    public String updateProducto(@RequestParam String producto, int precio) {
+        productoService.updateProducto(producto, precio);
+        return "redirect:/resumencotizaciones";
+    }
+
+    @PostMapping("/deleteProducto/confirm")
+    public String deleteProducto(@RequestParam String producto) {
+        productoService.deleteProducto(producto);
+        return "redirect:/resumencotizaciones";
+    }
 
 }
