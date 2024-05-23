@@ -18,12 +18,11 @@ public class CotizacionService {
     public CotizacionService(CotizacionRepository cotizacionRepository, ProductoService productoService) {
         this.cotizacionRepository = cotizacionRepository;
         this.productoService = productoService;
-        
     }
 
     
-    public void addCotizacion(int numPedido, String cedula, String description, String estado) {
-        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, description, estado);
+    public void addCotizacion(int numPedido, String cedula, String estado) {
+        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, estado);
         cotizacionRepository.save(cotizacion);
     }
 

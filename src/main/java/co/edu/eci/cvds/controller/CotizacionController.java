@@ -68,8 +68,8 @@ public class CotizacionController {
         return "crearCotizacion";
     }
     @PostMapping("/crearCotizacion/confirm")
-    public String addCotizacion(@RequestParam int numCotizacion, String cedula,String description, String estado){
-        cotizacionService.addCotizacion(numCotizacion, cedula, description, estado);
+    public String addCotizacion(@RequestParam int numCotizacion, String cedula, String estado){
+        cotizacionService.addCotizacion(numCotizacion, cedula,  estado);
         return "redirect:/resumencotizaciones";
     }
 

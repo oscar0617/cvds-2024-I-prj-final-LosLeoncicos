@@ -37,7 +37,7 @@ public class Cotizacion{
     public Cotizacion(){
     }
 
-    public Cotizacion(int numPedido, String cedula, String description, String estado) {
+    public Cotizacion(int numPedido, String cedula,  String estado) {
         this.numCotizacion = numPedido;
         this.cedula = cedula;
         this.estado = estado;
@@ -83,6 +83,8 @@ public class Cotizacion{
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
+
+    
     
 
 
