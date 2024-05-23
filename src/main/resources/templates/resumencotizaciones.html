@@ -55,7 +55,7 @@
                         </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="productos: ${list}" class="filas">
+                    <tr th:each="producto: ${productos}" class="filas">
                         <td th:text="${producto.producto}"></td>
                         <td th:text="${producto.marca}"></td>
                         <td th:text="${producto.tipo}"></td>
@@ -63,7 +63,7 @@
     
                         <td> 
                             <form th:action="@{/update}" method="post">
-                                <input type="hidden" th:name="numCotizacion" th:value="${cotizacion.numCotizacion}"> <button type="submit">Actualizar estado</button> 
+                                <input type="hidden" th:name="producto" th:value="${producto.producto}"> <button type="submit">Actualizar estado</button> 
                             </form>
                         </td>                    
                     </tr>
