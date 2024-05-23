@@ -23,8 +23,6 @@ public class Producto {
     @Column(name = "PRECIO")
     private int precio;
 
-    @Column(name = "ICONO")
-    private String icono;
 
     public Producto() {
     }

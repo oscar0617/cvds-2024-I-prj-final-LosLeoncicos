@@ -17,24 +17,23 @@ public class CotizacionService {
     }
 
     
-    public void addCotizacion(int numPedido, String cedula, String description) {
-        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, description);
+    public void addCotizacion(int numPedido, String cedula, String description, String estado) {
+        Cotizacion cotizacion = new Cotizacion(numPedido, cedula, description, estado);
         cotizacionRepository.save(cotizacion);
     }
 
     public Cotizacion getCotizacion(int numCotizacion) {
-        return cotizacionRepository.findByNumCotizacion(numCotizacion).get(1);
+        return cotizacionRepository.findByNumCotizacion(numCotizacion).get(0);
     }
 
     public List<Cotizacion> getAllCotizacion() {
         return cotizacionRepository.findAll();
     }
 
-    public Cotizacion updateCotizacion(Cotizacion cotizacion) {
-        if (cotizacionRepository.findByNumCotizacion(cotizacion.getNumCotizacion()).size() == 0) {
-            return cotizacionRepository.save(cotizacion);
-        }
-        return null;
+    public void updateCotizacion(int numCotizacion, String estado){
+        Cotizacion cotizacion = getCotizacion(numCotizacion);
+        cotizacion.setEstado(estado);
+        cotizacionRepository.save(cotizacion);
     }
 
     public void deleteCotizacion(int numCotizacion) {

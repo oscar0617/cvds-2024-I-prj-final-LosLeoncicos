@@ -24,6 +24,9 @@ public class Cotizacion{
     @Column(name = "DESCRIPCION")
     private String descripcion;
 
+    @Column(name = "ESTADO")
+    private String estado;
+
     @ManyToMany(targetEntity = Producto.class)
     @JoinTable(name = "PRODUCTOS_COTIZACIONES",
     joinColumns = @JoinColumn(name = "COTIZACION_ID"),
@@ -34,10 +37,11 @@ public class Cotizacion{
     public Cotizacion(){
     }
 
-    public Cotizacion(int numPedido, String cedula, String description) {
+    public Cotizacion(int numPedido, String cedula, String description, String estado) {
         this.numCotizacion = numPedido;
         this.cedula = cedula;
         this.descripcion = description;
+        this.estado = estado;
         this.productos = null;
     }
 
@@ -72,7 +76,12 @@ public class Cotizacion{
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
-    
 
+    public String getEstado() {
+        return estado;
+    }
 
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
 }
