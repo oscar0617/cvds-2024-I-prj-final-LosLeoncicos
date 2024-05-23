@@ -17,6 +17,8 @@ public class CotizacionService {
     @Autowired
     public CotizacionService(CotizacionRepository cotizacionRepository, ProductoService productoService) {
         this.cotizacionRepository = cotizacionRepository;
+        this.productoService = productoService;
+        
     }
 
     
