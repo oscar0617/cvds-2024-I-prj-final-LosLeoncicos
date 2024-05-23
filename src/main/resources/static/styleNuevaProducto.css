@@ -100,7 +100,7 @@ h1 {
     width: 220%;
     padding: 10px;
     border: 1px solid #e0e0e0;
-    background-color: #323436;
+    background-color: #e0e0e0;
     border-radius: 5px;
     margin-bottom: 5px;
     align-items: flex-start;
@@ -161,6 +161,7 @@ h1 {
 /* Estilo para los contenedores de inputs */
 .inputs {
     margin-bottom: 20px;
+    
 }
 
 .update {
@@ -185,3 +186,4 @@ select {
     appearance: none;
     cursor: pointer;
 }
+
