@@ -1,11 +1,13 @@
 package co.edu.eci.cvds.service;
 
+import co.edu.eci.cvds.model.Cotizacion;
 import co.edu.eci.cvds.model.Producto;
 import co.edu.eci.cvds.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductoService {
@@ -28,14 +30,28 @@ public class ProductoService {
         return productoRepository.findAll();
     }
 
-    public Producto updateProducto(Producto producto) {
-        if (productoRepository.findByproducto(producto.getProducto()).size() == 0) {
-            return productoRepository.save(producto);
-        }
-        return null;
-    }
-
     public void deleteProducto(String Producto) {
         productoRepository.deleteById(Producto);
+    }
+
+    public Producto getProducto(String nombre){
+        Producto producto = null;
+        Optional<Producto> opProducto = productoRepository.findById(nombre);
+        if(opProducto.isPresent()){
+            producto = opProducto.get();
+    
+        }
+        return producto;
+    }
+
+    public void addProducto(String producto, String marca, String tipo, int precio) {
+        Producto producto_ = new Producto(producto, marca, tipo, precio);
+        productoRepository.save(producto_);
+    }
+
+    public void updateProducto(String producto, int precio){
+        Producto producto_ = getProducto(producto);
+        producto_.setPrecio(precio);
+        productoRepository.save(producto_);
     }
 }

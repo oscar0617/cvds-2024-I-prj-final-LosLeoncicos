@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cotizaciones</title>
+    <link rel="stylesheet" href="../static/styleResumen.css">
+</head>
+<body>
+    <div id="div1">
+        <header>
+            <div class="header-container">
+                <img src="/static/Images/logo.png" alt="logo">
+                <h1>TOP GEAR CENTRO AUTOMOTRIZ BOGOTÁ</h1>
+            </div>
+            <h1 class="welcome-title">Bienvenido de nuevo, Admin</h1>
+        </header>
+        <h1 class="tittle">Cotizaciones en curso</h1>
+        <div class="productos">
+        
+        <table>
+            <thead>
+                
+                    <tr  id="cotizaciones">
+                        <th>Numero de la cotización</th>
+                        <th>Cédula</th>
+                        <th>Estado</th>
+                        <th>Total</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cotizacion: ${list}" class="filas">
+                    <td th:text="${cotizacion.numCotizacion}"></td>
+                    <td th:text="${cotizacion.cedula}"></td>
+                    <td th:text="${cotizacion.estado}"></td>
+                    <td th:text="${cotizacion.total}"></td>
+
+                    <td> 
+                        <form th:action="@{/update}" method="post">
+                            <input type="hidden" th:name="numCotizacion" th:value="${cotizacion.numCotizacion}"> <button type="submit">Actualizar estado</button> 
+                        </form>
+                    </td>                    
+                </tr>
+            </tbody>
+        </table>
+        <form action="/crearCotizacion" method="get">
+            <button type="submit">Nueva Cotización</button>
+        </form>
+        </div>
+
+        <div class="productosTabla">
+            <h2>Productos</h2>
+            <table>
+                <thead>
+                        <tr  id="productos">
+                            <th>Producto</th>
+                            <th>Marca</th>
+                            <th>Tipo</th>
+                            <th>Precio</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="producto: ${listProductos}" class="filas">
+                        <td th:text="${producto.producto}"></td>
+                        <td th:text="${producto.marca}"></td>
+                        <td th:text="${producto.tipo}"></td>
+                        <td th:text="${producto.precio}"></td>
+    
+                        <td> 
+                            <form th:action="@{/updateProducto}" method="post">
+                                <input type="hidden" th:name="producto" th:value="${producto.producto}"> <button type="submit">Actualizar estado</button> 
+                            </form>
+                        </td>     
+                        
+                        <td> 
+                            <form th:action="@{/deleteProducto/confirm(producto=${producto.producto})}" method="post" onsubmit="return confirm('¿Está seguro de que desea eliminar el producto?')">
+                                <button type="submit">Borrar</button> 
+                            </form>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <form action="/crearProducto" method="get">
+                <button type="submit">Nuevo Producto</button>
+            </form>
+            </div>
+    </div>
+</body>
+</html>

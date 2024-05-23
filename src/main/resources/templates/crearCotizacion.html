@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Cotización</title>
+    <link rel="stylesheet" href="../static/styleNuevaCotizacion.css">
+</head>
+<body>
+    <div id="div1">
+        
+        <header>
+            <div class="header-container">
+                <img src="/static/Images/logo.png" alt="logo">
+                <h1>TOP GEAR CENTRO AUTOMOTRIZ BOGOTÁ</h1>
+            </div>
+        </header>
+        <div class="main-container">
+        <form th:action="@{/crearCotizacion/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea crear ua nueva cotización?')">
+            <div class="inputs">
+                <h1 class="tittle">Crear Cotización</h1>
+                <div class="create">
+                <label for="numCotizacion">Número de Cotización</label>
+                <input type="text" id="numCotizacion" name="numCotizacion" required><br>
+                </div>
+
+                <div class="create">
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" name="cedula" required><br>
+                </div>
+                
+                <div class="create">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" required><br>
+                </div>
+
+                <div class="create">
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio" name="precio" required><br>
+                    </div>
+                <button type="submit">Crear nueva cotización</button>
+            </div>
+            
+        </form>
+        </div>
+    </div>
+</body>
+</html>

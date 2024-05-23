@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Producto</title>
+    <link rel="stylesheet" href="../static/styleNuevaProducto.css">
+</head>
+<body>
+    <div id="div1">
+        
+        <header>
+            <div class="header-container">
+                <img src="/static/Images/logo.png" alt="logo">
+                <h1>TOP GEAR CENTRO AUTOMOTRIZ BOGOTÁ</h1>
+            </div>
+        </header>
+        <div class="main-container">
+        <form th:action="@{/crearProducto/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea crear un nuevo producto?')">
+            <div class="inputs">
+                <h1 class="tittle">Crear Producto</h1>
+                <div class="create">
+                <label for="producto">Nombre del Producto</label>
+                <input type="text" id="producto" name="producto" required><br>
+                </div>
+
+                <div class="create">
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" name="marca" required><br>
+                </div>
+                
+                <div class="create">
+                <label for="tipo">Tipo de producto</label>
+                <input type="text" id="tipo" name="tipo" required><br>
+                </div>
+
+                <div class="create">
+                    <label for="precio">Precio del Producto</label>
+                    <input type="precio" id="precio" name="precio" required><br>
+                </div>
+                <button type="submit">Crear nuevo Producto</button>
+            </div>
+            
+        </form>
+        </div>
+    </div>
+</body>
+</html>
